@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    justify-content: center;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #041e49;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.header .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .row .logo {
+    color: rgb(204, 231, 254);
+    font-size: 44px;
+}
+
+.header .row .nav-items {
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .row .nav-items a {
+    text-transform: capitalize;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: #d3e3fd;
+    font-size: 20px;
+}
+
+.header .row .nav-items a:hover {
+    /* border-bottom: 1px dashed white; */
+    color: white;
+    border-width: 2px;
+    margin-bottom: 7px;
+}
+
+.cart {
+    font-size: 30px;
+    color: white;
+}
+
+.cart:hover {
+    color: rgb(204, 231, 254);
+}
+
+.product {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.product form {
+    /* background-color: #E1D7B7; */
+    color: #153448;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.box {
+    width: 300px;
+    height: 320px;
+    border: 2px dashed #d3caca;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.box .image {
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.box .starRating {
+    display: flex;
+    align-items: center;
+}
+
+.box .starRating .star {
+    font-size: 16px;
+}
+
+.searchSort {
+    display: flex;
+    gap: 20px;
+}
+
+.search input,
+.search button {
+    padding: 3px 10px 3px 10px;
+}
+
+.sort {
+    text-transform: capitalize;
+}
+
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.pagination button {
+    width: 50px;
+    height: 50px;
+    background-color: #d3e3fd;
+    border-radius: 100%;
+    border-style: none;
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pagination button:hover,
+.pagination button:focus {
+    background-color: #041e49;
+    color: white;
+    border-radius: 100%;
+}
