@@ -17,8 +17,15 @@ function Products() {
 
     useEffect(() => {
         let getItems = JSON.parse(localStorage.getItem('productDetails'));
+
+        if (!getItems || getItems.length === 0) {
+            setList([]); // Set an empty array for page numbers if no data
+            return;
+        }
         let totalPages = Math.ceil(getItems.length / perPageData);
         console.log(totalPages);
+
+
 
         let num = [];
         for (let i = 1; i <= totalPages; i++) {
@@ -34,7 +41,7 @@ function Products() {
 
         let pageDetails = paginationData ? paginationData : [];
         pageDetails ? setList(pageDetails) : setList([]);
-    }, [setList,currentPage])
+    }, [setList, currentPage])
 
     let handleChange = (e) => {
         let { name, value } = e.target;
